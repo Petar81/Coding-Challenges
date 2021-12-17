@@ -10,3 +10,19 @@
 // - Identify helpful String and Array methods/regular expressions for this particular case.
 // - Bake a function that'll take a String as an input & return a String of matched words on success or return false if no words matched.
 
+
+
+
+// CODING SOLUTION USING REGEX 
+
+longStrng = "howdoyoudohellomyfriendit'sbeenalongtime since notalkIhavebeenworkingheresincelastsixmonthstillnewyear";
+
+function matchStringToWords(myString) {
+    if (myString.match(/since|till|until/ig)) {
+        console.log(myString.match(/since|till|until/ig).join(", "));
+    } else {
+        return false;
+    }
+}
+
+matchStringToWords(longStrng); // "since, since, till"
