@@ -50,3 +50,4 @@ function checkCircularIdentity(str1, str2) {
 
 checkCircularIdentity("aabbb", "bbaab"); // IDENTICAL - no unmatched characters left
 checkCircularIdentity("aab$!bb", "b!+baa%$b"); // NON IDENTICAL - there is no match for character(s): ,,+,,,,%,,
+checkCircularIdentity("aa909!bb", "ba%$b"); // NON IDENTICAL - str1 is larger than str2
