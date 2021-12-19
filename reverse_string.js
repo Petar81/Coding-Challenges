@@ -34,3 +34,21 @@ function reverseString(name){
 }
 
 reverseString(yourName);
+
+
+
+
+
+// CODING SOLUTION USING BUILT IN JS ARRAY REVERSE METHOD
+
+var yourName2 = "yourName";
+
+function reverseString2(name){
+    let reversedName;
+    var name = name.split("");
+    reversedName = name;
+    reversedName = reversedName.reverse().join("");
+    console.log(reversedName); // emaNruoy
+}
+
+reverseString2(yourName2);
