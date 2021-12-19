@@ -17,8 +17,8 @@
 
 
 function checkCircularIdentity(str1, str2) {
-    let str1Length = str1.length;
-    let str2Length = str2.length;
+    const str1Length = str1.length;
+    const str2Length = str2.length;
     str1 = str1.split("");
     str2 = str2.split("");
     // use nested loop to compare chars from one string to another 
