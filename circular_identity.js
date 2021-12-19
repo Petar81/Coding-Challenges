@@ -29,7 +29,7 @@ function checkCircularIdentity(str1, str2) {
                 console.log("Character at position [" + [i] + "] in str1 has value of (" + str1[i] + ") and is equal to the str2 character at position [" + [j] + "] whose value is also (" + str2[j] + ")");
                 console.log("Removing character (" + str2[j] + ") at position [" + j + "] in str2");
 
-                // turn first matching str2 char into an empty string char to avoid its subsequent reiteration
+                // turn first matching str2 char into an empty string char to avoid its subsequent comparison
                 str2[j] = '';
                 console.log("The str2 now contains the following unmatched characters: " + str2);
                 break;
