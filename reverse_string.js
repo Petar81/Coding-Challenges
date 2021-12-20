@@ -16,7 +16,7 @@
 
 // CODING SOLUTION 
 
-var yourName = "yourName";
+const yourName = "yourName";
 
 function reverseString(name){
     let reversedName = [];
@@ -41,7 +41,7 @@ reverseString(yourName);
 
 // CODING SOLUTION USING BUILT IN JS ARRAY REVERSE METHOD
 
-var yourName2 = "yourName";
+const yourName2 = "yourName";
 
 function reverseString2(name){
     let reversedName;
