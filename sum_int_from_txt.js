@@ -64,3 +64,31 @@ function parseFile(input) {
 }
 
 
+
+// CODING SOLUTION WITH XMLHttpRequest OBJECT
+
+function sumupIntegersFromFile(file) {
+    var sum = 0;
+    var xmlHTTP = new XMLHttpRequest();
+    xmlHTTP.open("GET", file, false);
+    xmlHTTP.onreadystatechange = function ()
+    {
+        if(xmlHTTP.readyState === 4)
+        {
+            if(xmlHTTP.status === 200 || xmlHTTP.status == 0)
+            {
+                var response = xmlHTTP.responseText;
+                const lines = response.split(/\r\n|\n/);
+                lines.forEach((line) => {
+                    // console.log(line);
+                    sum += Number(line);
+                 });
+                
+            }
+        }
+    }
+    xmlHTTP.send(null);
+    console.log(sum);
+}
+
+sumupIntegersFromFile("file:///C:/path/to/your-file.txt");
