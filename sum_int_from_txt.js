@@ -96,7 +96,7 @@ sumupIntegersFromFile("file:///C:/path/to/your-file.txt");
 
 
 
-//CODING SOLUTION WITH FETCH API
+// CODING SOLUTION WITH FETCH API
 
 fetch('numbers.txt')
   .then(response => response.text())
@@ -112,3 +112,21 @@ fetch('numbers.txt')
     console.log(error)
   });
   
+
+
+
+// CODING SOLUTION WITH NODEJS
+
+var fs = require("fs");
+var numbersFile = fs.readFileSync("numbers.txt","UTF-8");
+
+function sumNumbers() {
+
+    const lines = numbersFile.split(/\r\n|\n/);
+  
+    let sum = 0;
+    for(let i=0; i < lines.length; i++){
+      sum += Number(lines[i]);
+    }
+    console.log(sum);
+  }
