@@ -92,3 +92,23 @@ function sumupIntegersFromFile(file) {
 }
 
 sumupIntegersFromFile("file:///C:/path/to/your-file.txt");
+
+
+
+
+//CODING SOLUTION WITH FETCH API
+
+fetch('numbers.txt')
+  .then(response => response.text())
+  .then(text => {
+    var sum = 0;
+    const lines = text.split(/\r\n|\n/);
+    lines.forEach((line) => {
+        // console.log(line);
+        sum += Number(line);
+     });
+     console.log(sum);
+  }).catch((error) => {
+    console.log(error)
+  });
+  
