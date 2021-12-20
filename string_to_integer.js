@@ -12,12 +12,13 @@
 
 
 
-// CODING SOLUTION USING match(regex) METHOD (any non numerical character at any position will make code throw an error)
+// CODING SOLUTION USING match(regex) METHOD
+// Any non numerical character at any position will make code throw an error
 
 function stringToInteger(str) {
 
     if (str.match("^[0-9]+$")) {
-        console.log(parseInt(str));
+        console.log(str);
     } else {
         throw 'Parameter is not a number!';
     }
@@ -27,4 +28,25 @@ try {
     stringToInteger('88 # !17');
 } catch (e) {
     console.log(e); // Parameter is not a number!
+}
+
+
+
+// CODING SOLUTION using isNaN() METHOD
+// any non numerical character(s) at the begining of String will throw an error
+// otherwise, code will NOT throw an error if non numerical characters found elswhere in the String
+
+function strToInteger(str) {
+
+    if (isNaN(parseInt(str))) {
+        throw 'Parameter is not a number!';
+    } else {
+        console.log(parseInt(str));
+    }
+}
+
+try {
+    strToInteger('88 # !17');
+} catch (e) {
+    console.log(e); // 88
 }
