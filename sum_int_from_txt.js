@@ -37,5 +37,30 @@ document.getElementById('file').onchange = function(){
 
 
 
+// CODING SOLUTION WITH FOR EACH & ES6 JS FEATURES
+
+function parseFile(input) {
+
+    const file = input.target.files[0];
+    const fileReader = new FileReader();
+    let sum = 0;
+
+    fileReader.onload = (event) => {
+        const file = event.target.result;
+        const lines = file.split(/\r\n|\n/);
+        // Reading line by line
+        lines.forEach((line) => {
+           // console.log(line);
+           sum += Number(line);
+        });
+    };
+
+    fileReader.onerror = (event) => {
+        alert(event.target.error.name);
+    };
+
+    fileReader.readAsText(file);
+    console.log(sum);
+}
 
 
