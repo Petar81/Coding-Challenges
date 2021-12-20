@@ -4,3 +4,8 @@
 
 
 
+// SOLUTION IN PSEUDOCODE
+
+// - Define an input field (input file).
+// - Identify file reader function/class, identify string split method, identify parse number/integer method. 
+// - Bake a function that'll take a file as an input, parse it line by line and sum all the numbers.
