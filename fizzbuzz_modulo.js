@@ -13,3 +13,18 @@
 
 
 
+// CODING SOLUTION
+
+function fizzBuZZ(someNum){
+    if(Number(someNum) % 3 == 0){
+        console.log('Fizz');
+    }
+    if(Number(someNum) % 5 == 0){
+        console.log('Buzz');
+        return;
+    }
+    console.log("i");
+}
+
+const numero = 30;
+fizzBuZZ(numero);
